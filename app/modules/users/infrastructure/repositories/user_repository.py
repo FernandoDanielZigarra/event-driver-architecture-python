@@ -1,9 +1,8 @@
 from app.modules.users.domain.models.models import UserCreate, UserOutput
 from app.modules.users.domain.interfaces.user_repository import IUserRepository
 from app.modules.users.domain.exceptions import UserAlreadyExistsException
-from asyncpg.exceptions import UniqueViolationError
 from app.db.db import db
-from ..sql_loader import load_query
+from ..utils.sql_loader import load_query
 
 
 INSERT_USER = load_query("insert_user.sql")
